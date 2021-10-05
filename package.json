@@ -1,0 +1,28 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "SET NODE_ENV=DEVELOPMENT& nodemon server/server",
+    "prod": "SET NODE_ENV=PRODUCTION& nodemon server/server",
+    "seeder": "node server/seeder.js",
+    "heroku:postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix client && npm build --prefix client"
+  },
+  "author": "Mahavir Vaishnav",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.22.0",
+    "bootstrap": "^5.1.1",
+    "concurrently": "^6.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.8",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.13",
+    "react-router-dom": "^5.3.0"
+  }
+}
